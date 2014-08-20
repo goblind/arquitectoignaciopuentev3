@@ -1,0 +1,24 @@
+extend ../../views/layout
+
+block content
+	.row
+		.col-sm-4
+			h3 Escribime!
+			hr
+			address
+				strong Email:
+				a(href='mailto:#')  info@ignaciopuente.com <br><br>
+				strong Teléfono:
+				|  15 5555 5555
+		.col-sm-8.contact-form
+			form.form#contact(method='post', role='form')
+				.row
+					.col-xs-6.col-md-6.form-group
+						input.form-control#name(name='name', placeholder='Nombre', type='text', required autofocus)
+					.col-xs-6.col-md-6.form-group
+						input.form-control#email(name='email', placeholder='Email' required)
+				textarea.form-control#message(name='message', placeholder='Mensaje', rows='5')
+				br
+				.row
+					.col-xs-12.col-md-12.form-group
+						button.btn.btn-default.pull-right(type='submit') Enviar

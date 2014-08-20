@@ -6,6 +6,6 @@ var app = module.exports = express();
 app.set('views', __dirname);
 app.set('view engine', 'jade');
 
-app.get('publicaciones', function(req, res){
+app.get('/publicaciones', function(req, res){
 	res.render('publicaciones');
 });
