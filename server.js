@@ -12,6 +12,7 @@ var noticias		= require('./app/routes/noticias');
 var premios			= require('./app/routes/premios');
 var estudio 		= require('./app/routes/estudio');
 
+var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 //app.set('port', process.env.PORT || 1437);
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || '8080');
 app.use(express.static(__dirname + '/public')); 	// set the static files location /public/img will be /img for users
@@ -33,6 +34,6 @@ app.get('/', function(req, res){
 	res.redirect("/inicio");
 });
 
-app.listen(app.get('port'), function(){
+app.listen(app.get('port'), ip, function(){
 	console.log("Server corriendo en " + app.get('port'));
 });
