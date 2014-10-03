@@ -12,7 +12,8 @@ var noticias		= require('./app/routes/noticias');
 var premios			= require('./app/routes/premios');
 var estudio 		= require('./app/routes/estudio');
 
-app.set('port', process.env.PORT || 1437);
+//app.set('port', process.env.PORT || 1437);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || '8080');
 app.use(express.static(__dirname + '/public')); 	// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); 							// log every request to the console
 app.use(bodyParser.json())							// pull information from html in POST
