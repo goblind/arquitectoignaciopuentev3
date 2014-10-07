@@ -9,3 +9,16 @@ var pool = module.exports = mysql.createPool({
     multipleStatements: true,
     supportBigNumbers: true
 });
+
+/*
+tabla 
+    usuario
+    campos
+        usuario
+        password
+
+usuario admin:
+    usuario: ignacio
+    password: ArQUitectO
+
+*/
