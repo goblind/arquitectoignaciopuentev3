@@ -1,0 +1,49 @@
+extend ../../views/layout
+
+block content
+	.row
+		.text-center
+			h1 Arquitecto Ignacio Puente
+			p.lead Administración	
+	.row		
+		.text-center
+			button#editarProyectoBotton.btn.btn-default.btn-sm(type='button', style='margin-left: 10px; margin-right: 10px;') Editar Proyecto
+			button#crearProyectoBotton.btn.btn-default.btn-sm(type='button', style='margin-left: 10px; margin-right: 10px;')  Crear Proyecto
+			br
+			br
+			br
+	.row
+		#editarProyectoComboBox.btn-group
+			button.btn.btn-danger(type='button') Action
+			button.btn.btn-danger.dropdown-toggle(type='button', data-toggle='dropdown')
+				span.caret
+				span.sr-only Toggle Dropdown
+			ul.dropdown-menu(role='menu')
+				li
+					a(href='#') Opción 1
+				li
+					a(href='#') Opción 2
+				li.divider
+				li
+					a(href='#') Opción 3
+	br
+	.row
+		.btn-group
+			button.btn.btn-danger(type='button') Action
+			button.btn.btn-danger.dropdown-toggle(type='button', data-toggle='dropdown')
+				span.caret
+				span.sr-only Toggle Dropdown
+			ul.dropdown-menu(role='menu')
+				li
+					a(href='#') Action
+				li
+					a(href='#') Another action
+				li
+					a(href='#') Something else here
+				li.divider
+				li
+					a(href='#') Separated link
+	
+	script(src='/javascripts/dropdown.js')
+	script(src='/javascripts/scripts/buttonSelection.js')
+	script(src='/javascripts/scripts/upload.js')
