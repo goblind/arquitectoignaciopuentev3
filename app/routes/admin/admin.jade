@@ -1,0 +1,55 @@
+extend ../../views/layout
+
+block content
+	.row
+		.text-center
+			h1 Arquitecto Ignacio Puente
+			p.lead Administración	
+	.row
+		.text-center
+			button#editarProyectoBoton.btn.btn-default(type='button', style='margin-left: 10px; margin-right: 10px;') Editar Proyecto
+			button#crearProyectoBoton.btn.btn-default(type='button', style='margin-left: 10px; margin-right: 10px;')  Crear Proyecto
+	hr
+	#editarProyecto.row
+		.btn-group
+			#editarProyectoTitulo.button.btn.btn-default(type='button') Proyectos
+			button.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+				span.caret
+				span.sr-only Toggle Dropdown
+			#editarProyectoLista.ul.dropdown-menu(role='menu')
+				li
+					a(href='#') Opción 1
+				li
+					a(href='#') Opción 2
+				li.divider
+				li
+					a(href='#') Opción 3
+	
+	#crearProyecto.row				
+		h3 Proyecto Nuevo
+		br
+		form.form#crearProyectoForm(method='post', role='form')
+			.row
+				.col-md-4.form-group
+					input.form-control#crearProyectoNombre(name='name', placeholder='Nombre del Proyecto', type='text', required autofocus)
+				.col-md-4.form-group
+				.col-md-4.form-group
+			.row
+				.col-md-4.form-group
+					textarea.form-control#crearProyectoDescripcionSp(name='descSp', placeholder='Descripción Español',rows='3')
+				.col-md-4.form-group
+				.col-md-4.form-group
+			.row
+				.col-md-4.form-group
+					textarea.form-control#crearProyectoDescripcionEn(name='descEn', placeholder='Descripción Inglés', rows='3')
+				.col-md-4.form-group
+				.col-md-4.form-group
+			.row
+				.col-md-4.form-group
+					button.btn.btn-default.pull-right(type='submit') Crear Proyecto
+				.col-md-4.form-group
+				.col-md-4.form-group
+	
+	script(src='/javascripts/dropdown.js')
+	script(src='/javascripts/scripts/buttonSelection.js')
+	script(src='/javascripts/scripts/upload.js')
