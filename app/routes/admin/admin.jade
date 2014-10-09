@@ -7,8 +7,8 @@ block content
 			p.lead Administración	
 	.row
 		.text-center
-			button#editarProyectoBoton.btn.btn-default(type='button', style='margin-left: 10px; margin-right: 10px;') Editar Proyecto
 			button#crearProyectoBoton.btn.btn-default(type='button', style='margin-left: 10px; margin-right: 10px;')  Crear Proyecto
+			button#editarProyectoBoton.btn.btn-default(type='button', style='margin-left: 10px; margin-right: 10px;') Editar Proyecto			
 	hr
 	#editarProyecto.row
 		.btn-group
@@ -18,15 +18,23 @@ block content
 				span.sr-only Toggle Dropdown
 			#editarProyectoLista.ul.dropdown-menu(role='menu')
 				li
-					a(href='#') Opción 1
+					a(href='#') 
 				li
-					a(href='#') Opción 2
+					a(href='#') 
 				li.divider
 				li
-					a(href='#') Opción 3
-	
-	#crearProyecto.row				
-		h3 Proyecto Nuevo
+					a(href='#') 
+
+	#crearProyecto.row
+		.row
+			.col-md-12
+				h3 Proyecto Nuevo
+		br
+		.row
+			.col-md-12
+				.btn-group.btn-toggle
+					button.btn.btn-default.active Público
+					button.btn.btn-default Privado
 		br
 		form.form#crearProyectoForm(method='post', role='form')
 			.row
