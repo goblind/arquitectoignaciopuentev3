@@ -26,37 +26,68 @@ block content
 					a(href='#') 
 
 	#crearProyecto.row
-		.row
-			.col-md-12
-				h3 Proyecto Nuevo
-		br
-		.row
-			.col-md-12
-				input(type='checkbox' checked, name='publico')
-		br
-		form.form#crearProyectoForm(method='post', role='form')
+		.col-md-6
 			.row
-				.col-md-4.form-group
-					input.form-control#crearProyectoNombre(name='name', placeholder='Nombre del Proyecto', type='text', required autofocus)
-				.col-md-4.form-group
-				.col-md-4.form-group
+				.col-md-12
+					h3 Proyecto Nuevo				
+			br
+			form.form#crearProyectoForm(method='post', role='form')
+				.row
+					.col-md-8.form-group
+						input.form-control#crearProyectoNombre(name='name', placeholder='Nombre del Proyecto', type='text', required autofocus)
+					.col-md-4.form-group
+				.row
+					.col-md-8.form-group
+						textarea.form-control#crearProyectoDescripcionSp(name='descSp', placeholder='Descripción Español',rows='3')
+					.col-md-4.form-group
+				.row
+					.col-md-8.form-group
+						textarea.form-control#crearProyectoDescripcionEn(name='descEn', placeholder='Descripción Inglés', rows='3')
+					.col-md-4.form-group
+				.row
+					.col-md-12
+						input#crearProyectoCheck(type='checkbox' checked, name='publico') 
+						span    Público	
+				br
+				//-#crearProyectoPrivado.row
+				.row#crearProyectoPrivado
+					.col-md-8.form-group
+						input.form-control#crearProyectoNombrePersona(name='nombrePersona', placeholder='Nombre del Cliente', type='text')
+					.col-md-4.form-group
+				.row
+					.col-md-8.form-group
+						input.form-control#crearProyectoEmail(name='emailPersona', placeholder='Email Cliente', type='text')
+					.col-md-4.form-group
 			.row
+				.col-md-8.form-group
+					#crearProyectoSubmit.button.btn.btn-success.pull-right(type='submit') Crear Proyecto
 				.col-md-4.form-group
-					textarea.form-control#crearProyectoDescripcionSp(name='descSp', placeholder='Descripción Español',rows='3')
-				.col-md-4.form-group
-				.col-md-4.form-group
-			.row
-				.col-md-4.form-group
-					textarea.form-control#crearProyectoDescripcionEn(name='descEn', placeholder='Descripción Inglés', rows='3')
-				.col-md-4.form-group
-				.col-md-4.form-group
-			.row
-				.col-md-4.form-group
-					button.btn.btn-default.pull-right(type='submit') Crear Proyecto
-				.col-md-4.form-group
-				.col-md-4.form-group
-	
+		.col-md-6
+			br
+			br
+			br
+			.row(style='margin-top:15px;')
+				.panel.panel-default#crearProyectoFotografias
+					.panel-heading Agregar Fotografías al Proyecto
+					.panel-body
+						.row
+							.col-md-6.text-center(style='margin-top:10px;')
+								a(href='#')
+									img(data-src="holder.js/200x180/text:imagen grande", alt="imagen")
+							.col-md-6.text-center(style='margin-top:50px;')
+								a(href='#')
+									img(data-src="holder.js/110x90/text:imagen chica", alt="imagen")
+							br
+							br
+						.row
+							br
+							#crearProyectoFotografiasAgregar.button.btn.btn-primary.pull-right(type='submit', style='margin-right:14px;') Agregar Fotografía
+				#crearProyectoFotografiasFin.button.btn.btn-success.pull-right Agregado de Fotografías Terminado
+
+
+
 	script(src='/javascripts/dropdown.js')
 	script(src='/javascripts/bootstrap-switch.js')
-	script(src='/javascripts/scripts/buttonSelection.js')
+	script(src='/javascripts/scripts/admin.js')
 	script(src='/javascripts/scripts/upload.js')
+	script(src='/javascripts/scripts/ajaxCalls.js')

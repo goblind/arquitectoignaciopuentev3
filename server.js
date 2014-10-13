@@ -1,8 +1,9 @@
-var express        = require('express');
-var morgan         = require('morgan');
-var bodyParser     = require('body-parser');
-var methodOverride = require('method-override');
-var app            = express();
+var express        	= require('express');
+var morgan         	= require('morgan');
+var bodyParser     	= require('body-parser');
+var methodOverride 	= require('method-override');
+var app          	  	= express();
+var session 		= require('express-session')
 
 var inicio 		= require('./app/routes/inicio');
 var proyectos		= require('./app/routes/proyectos');
@@ -16,6 +17,11 @@ app.use(morgan('dev')); 				// log every request to the console
 app.use(bodyParser.json())				// pull information from html in POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride()); 				// simulate DELETE and PUT
+app.use(session({
+	secret: 'keyboard dog',
+	resave: true,
+    	saveUninitialized: true
+}))
 app.use(inicio);					// routes
 app.use(proyectos);
 app.use(admin);
