@@ -62,7 +62,7 @@ $(function() {
 	//click a cargar un set de fotos
 	$('#crearProyectoFotografiasAgregar').on('click', function(){
 		//validación
-		insertFoto(getVal('crearProyectoNombre'),)
+		//insertFoto(getVal('crearProyectoNombre'),)
 	});
 
 	//click a finalización total de carga de fotos

@@ -5,7 +5,8 @@ var utils = require('../../config/database/utils');
 
 //métodos que se exportan para poder ser utilizados desde la capa anterior (index.js de la ruta admin)
 exports.insertProyecto = function(data, callback){
-	var query = "CALL insertProyecto('"+data.nombreProyecto+"','"+data.descripcionProyectoSp+"', '"+data.descripcionProyectoEn+"','"+data.publico+"','"+data.nombreCliente+"','"+data.mailCliente+"');";		
+	var query = "CALL insertProyecto('"+data.nombreProyecto+"','"+data.descripcionProyectoSp+"', '"+data.descripcionProyectoEn+"',"+data.publico+",'"+data.nombreCliente+"','"+data.mailCliente+"');";		
+	console.log('query' + query);
 	utils.exec(query, null, callback);	
 }
 

@@ -34,6 +34,7 @@ app.get('/insertProyecto', function(req, res){
 	//los métodos para consultar a la base de datos.
 	//llamo al método correspondiente y le envío 'data' y una función
 	//para obtener la respuesta de manera asincrónica.
+	console.log(data);
 	mysqldb.insertProyecto(data, function (err, results, fields){
 		if(err) 
 			throw err;

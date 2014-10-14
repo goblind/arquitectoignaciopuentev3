@@ -2,11 +2,11 @@ var express        	= require('express');
 var morgan         	= require('morgan');
 var bodyParser     	= require('body-parser');
 var methodOverride 	= require('method-override');
-var app          	  	= express();
+var app          	= express();
 var session 		= require('express-session')
 
 var inicio 		= require('./app/routes/inicio');
-var proyectos		= require('./app/routes/proyectos');
+var proyectos	= require('./app/routes/proyectos');
 var admin 		= require('./app/routes/admin');
 
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
