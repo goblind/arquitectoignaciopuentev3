@@ -1,3 +1,5 @@
+//LLAMADAS AJAX PARA REALIZAR LOS QUERIES A LA BASE DE DATOS
+
 function insertProyecto(nombreProyecto, descripcionProyectoSp, descripcionProyectoEn, publico, nombreCliente, mailCliente){
 	var data = { 
 		nombreProyecto: nombreProyecto,
@@ -7,16 +9,85 @@ function insertProyecto(nombreProyecto, descripcionProyectoSp, descripcionProyec
 		nombreCliente: nombreCliente,
 		mailCliente: mailCliente
 	}
-	console.log(data);
-	console.log(JSON.stringify(data));	
-	console.log(JSON.stringify(data[0]));	
 	$.ajax({
 		url: "/insertProyecto",
-		data: data,				
-		complete: function(data){
-			alert('ok')		;
-			//data.responseJSON[0],					
-		}
+		data: data
 	});
 }
 
+function insertFoto(nombreProyecto, nombreFoto, nombreFotoChica){
+	var data = {
+		nombreProyecto: nombreProyecto,
+		nombreFoto: nombreFoto,
+		nombreFotoChica: nombreFotoChica
+	}
+	$.ajax({
+		url: '/insertFoto',
+		data: data		
+	});
+}
+
+function setProyecto(nombreProyecto){
+	var data = {
+		nombreProyecto: nombreProyecto		
+	}
+	$.ajax({
+		url: '/setProyecto',
+		data: data		
+	});
+}
+
+function getProyectos(){
+	$.ajax({
+		url: '/getProyectos',
+		data: data,
+		complete: function(data){			
+			//data.responseJSON[0],					
+		}		
+	});
+}
+
+function getProyecto(nombreProyecto){
+	var data = {
+		nombreProyecto: nombreProyecto		
+	}
+	$.ajax({
+		url: '/getProyecto',
+		data: data,
+		complete: function(data){			
+			//data.responseJSON[0],					
+		}		
+	});
+}
+
+function updateProyecto(nombreProyecto, nombreProyectoNuevo, descripcionProyectoSp, descripcionProyectoEn, publico, nombreCliente, mailCliente){
+	var data = { 
+		nombreProyecto: nombreProyecto,
+		nombreProyectoNuevo: nombreProyectoNuevo,
+		descripcionProyectoSp: descripcionProyectoSp,
+		descripcionProyectoEn: descripcionProyectoEn,
+		publico: publico,
+		nombreCliente: nombreCliente,
+		mailCliente: mailCliente
+	}
+	$.ajax({
+		url: '/updateProyecto',
+		data: data,
+		complete: function(data){			
+			//data.responseJSON[0],					
+		}		
+	});
+}
+
+function deleteFoto(nombreFoto){
+	var data = {
+		nombreFoto: nombreFoto
+	}
+	$.ajax({
+		url: '/deleteFoto',
+		data: data,
+		complete: function(data){			
+			//data.responseJSON[0],					
+		}		
+	});
+}

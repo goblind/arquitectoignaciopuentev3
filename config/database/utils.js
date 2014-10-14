@@ -1,5 +1,9 @@
+//UTILS.JS
+
+//instancio un pool de conexión a mysql
 var pool = require('./connection');
 
+//export de los métodos (Son 3: 1ro obtener la conexión, 2do cerrar la conexión, 3ro executar sobre la conexión)
 module.exports = {
   	getDBConnection: function(callback) {
 		pool.getConnection(function(err, connection){
