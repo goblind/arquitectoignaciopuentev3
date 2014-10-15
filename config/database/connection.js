@@ -21,15 +21,7 @@ var pool = module.exports = mysql.createPool({
     multipleStatements: true,
     supportBigNumbers: true
 });
-/*
- var connection = mysql.createConnection({
-  host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
-  user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
-  pass     : process.env.OPENSHIFT_MYSQL_DB_PASSWORD,
-  port     : process.env.OPENSHIFT_MYSQL_DB_PORT,
-  database : 'stembuds'
- });
-*/
+
 
 /*
 usuario admin:

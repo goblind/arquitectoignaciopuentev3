@@ -19,6 +19,7 @@ module.exports = {
 	},
    	exec: function(query, data, callback) {
 	   	var _this = this;
+	   		//console.log('utils.js' + query);
 	    	this.getDBConnection(function(err, connection){
 	       		 if(err){
 	            			console.log(err);

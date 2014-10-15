@@ -54,7 +54,8 @@ function getProyecto(nombreProyecto){
 	$.ajax({
 		url: '/getProyecto',
 		data: data,
-		complete: function(data){			
+		complete: function(data){	
+			) data.responseJSON[0].nombreProyecto		
 			//data.responseJSON[0],					
 		}		
 	});
