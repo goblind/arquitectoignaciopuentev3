@@ -14,7 +14,7 @@ var pool = module.exports = mysql.createPool({
 
 	host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
   	user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
-  	pass     : process.env.OPENSHIFT_MYSQL_DB_PASSWORD,
+  	password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD,
   	port     : process.env.OPENSHIFT_MYSQL_DB_PORT,
   	database : 'arquitectoignaciopuente',    
     connectionLimit: 400,
