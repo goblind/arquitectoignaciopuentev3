@@ -3,11 +3,12 @@ var morgan         	= require('morgan');
 var bodyParser     	= require('body-parser');
 var methodOverride 	= require('method-override');
 var app          	= express();
-var session 		= require('express-session')
+var session 		= require('express-session');
 
 var inicio 		= require('./app/routes/inicio');
-var proyectos	= require('./app/routes/proyectos');
+
 var admin 		= require('./app/routes/admin');
+var menu 		= require('./app/routes/menu');
 
 var ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
@@ -23,8 +24,9 @@ app.use(session({
     	saveUninitialized: true
 }))
 app.use(inicio);					// routes
-app.use(proyectos);
+
 app.use(admin);
+app.use(menu);
 
 app.get('/', function(req, res){	
 	res.redirect("/inicio");

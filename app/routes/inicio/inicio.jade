@@ -2,53 +2,23 @@ extend ../../views/layout
 
 block content	
 	.intro-header-inicio
-    .container
-        .row
-          .col-lg-12
-            .intro-message-inicio
-              #coolContainer
-                h1.h-inicio
-                  span.spanGray.coolName1 ARQUITECTO
-                  span.spanWhite.coolName1 IGNACIOPUENTE | Design
-              hr.divider-inicio
-              ul.list-inline.intro-social-buttons-inicio.liMenu
-                li
-                  a.coolLink(href='./menu.html')
-                    span Saltar intro
+		.container
+			.row
+				.col-lg-12
+					.intro-message-inicio
+						#coolContainer
+							h1.h-inicio
+								span.spanGray.coolName1 ARQUITECTO
+								span.spanWhite.coolName1 IGNACIOPUENTE | Design
+						hr.divider-inicio
+						ul.list-inline.intro-social-buttons-inicio.liMenu
+							li
+								a.coolLink(href='/menu')
+									span Saltar intro
 
-    script(src='js/bootstrap.min.js')
-    script(type='text/javascript', src='javascripts/TweenMax.min.js')
-    script(type='text/javascript', src='javascripts/cooltext.animations.js')
-    script(type='text/javascript', src='javascripts/cooltext.min.js')
-    script(type='text/javascript')
-      function cooltext()
-      {
-      $(".coolName1").cooltext({
-      sequence:[
-      {action:"animation", animation:"cool48", delay:2}
-      ]
-      });
-      $(".coolName2").cooltext({
-      sequence:[
-      {action:"animation", animation:"cool48", delay:2}
-      ]
-      });
-      setTimeout(function(){ $("#coolContainer").html("<h1><span class='spanGray coolName1'>ARQUITECTO</span><span class='spanWhite coolName1'>IGNACIOPUENTE | Design</span></h1>"); cooltext();}, 6000);
-      }
-      $(document).ready(function(){
-      $(".coolLink").cooltext({
-      onMouseOver:
-      {action:"animation", animation:"cool79"}
-      })
-      $(".coolName1").cooltext({
-      sequence:[
-      {action:"animation", animation:"cool48"}
-      ]
-      });
-      $(".coolName2").cooltext({
-      sequence:[
-      {action:"animation", animation:"cool48"}
-      ]
-      });
-      setTimeout(function(){ $("#coolContainer").html("<h1><span class='spanGray coolName1'>ARQUITECTO</span><span class='spanWhite coolName1'>IGNACIOPUENTE | Design</span></h1>"); cooltext();}, 6000);
-      });
+	script(src='javascripts/bootstrap.min.js')
+	script(src='javascripts/TweenMax.min.js')
+	script(src='javascripts/cooltext.animations.js')
+	script(src='javascripts/cooltext.min.js')
+	script(src='javascripts/scripts/textAnimation.js')
+	

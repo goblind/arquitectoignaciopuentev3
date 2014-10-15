@@ -1,3 +1,333 @@
-.contact-form {
+/*.contact-form {
     margin-top:70px;
+}*/
+
+
+h1 span{
+    font-size:36px;
+    color:#808080;
+    padding-top:10px;
 }
+
+
+.boby-inicio{
+ width: 100%;
+    height: 100%;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+
+}
+
+.h-inicio{
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+
+.intro-header-inicio {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #fff;
+    background:black;
+/*    background: url(../img/intro-bg.jpg) no-repeat center center;
+*/    background-size: cover;
+}
+
+.intro-message-inicio {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message-inicio > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 2em;
+}
+
+.divider-inicio {
+    width: 200px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message-inicio > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message-inicio {
+        padding-bottom: 15%;
+    }
+
+    .intro-message-inicio > h1 {
+        font-size: 3em;
+    }
+
+    
+
+    ul.intro-social-buttons-inicio > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider-inicio {
+        width: 100%;
+    }
+}
+
+.spanWhite
+{
+	color:#fff !important;
+}
+
+
+/*fin de pagina de inicio*/
+
+
+
+h1 span{
+    font-size:36px;
+    color:#808080;
+    padding-top:10px;
+}
+
+
+.body-menu{
+width: 100%;
+    height: 100%;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+
+
+
+.h-menu{
+     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+
+.uMenu{
+    font-size: 18px;
+    list-style:none;
+    text-align: left;
+    color: #C0C0C0  ;
+
+}
+
+.uMenu{
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width:70px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.uMenu li:hover{
+    color: #C5C1C1 ;
+    text-shadow: 0px 0px 1px #C5C1C1;
+    padding-left: 5px;
+}
+
+
+
+
+.intro-header-menu {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #fff;
+    background:black;
+    background-size: cover;
+}
+
+.intro-message-menu {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message-menu > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 2em;
+}
+
+.intro-divider-menu {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message-menu > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message-menu {
+        padding-bottom: 15%;
+    }
+
+    .intro-message-menu > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons-menu > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+
+    .intro-divider-menu {
+        width: 100%;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.spanWhite
+{
+    color:#fff !important;
+}
+
+
+/*fin de pagina menu*/
+
+
+
+.header span.right{
+  float: right;
+}
+.header span.right a{
+  float: none;
+  display: inline;
+}
+
+
+.header a{
+  padding: 0px 10px;
+  letter-spacing: 1px;
+  color: #ddd;
+  display: block;
+  float: left;
+}
+
+
+.maincontent{
+        color: #808080;
+}
+
+
+.page-title{
+    color: #fff  !important;
+}
+
+.form-control{
+    background-color: #DCDCDC    !important;
+}
+
+.contact-data
+{
+    color:#fff;
+}
+
+
+/*fin de pagina de contacto*/
+
+
+
+/*body {
+    padding-top: 25px;  
+    background-color: black !important;
+    line-height: 0 !important;
+}
+*/
+.thumb {
+    margin-bottom: 30px;
+}
+
+/*footer {
+    margin: 50px 0;
+}*/
+
+.title{
+    color: #fff !important;
+    margin: 0px 0 20px !important;
+    padding-top: 50px !important;
+}
+
+.header-obras span.right{
+    float: right;
+}
+
+.header-obras span.right a{
+    float: none;
+    display: inline;
+}
+
+.header-obras a{
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #ddd;
+    display: block;
+    float: left;
+}
+
+.thumbnail
+{
+    padding:0px;
+    margin-bottom:0px;
+    cursor:default;
+}
+
+.details{ margin:15px 20px; }   
+h4{ font:300 16px 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height:160%; letter-spacing:0.15em; color:#fff; text-shadow:1px 1px 0 rgb(0,0,0); }
+p{ font:300 12px 'Lucida Grande', Tahoma, Verdana, sans-serif; color:#aaa; text-shadow:1px 1px 0 rgb(0,0,0);}
+a{ text-decoration:none; }
+
+.obrasMosaicLink
+{
+    float:right;
+    top:-14px;
+    right:-15px;
+    position:relative;
+    z-index:0;
+    height:15px;
+    width:50px;
+    color:#fff;
+    cursor:pointer;
+}
+
+.obrasMosaicLink:hover
+{
+    color:red;
+}
+
+.img-responsive
+{
+    cursor:pointer;
+}
+
+.reveal-modal h1
+{
+    font-size:20px;
+    margin-top:0px !important;
+}
+
+.reveal-modal p
+{
+    font:300 12px 'Lucida Grande', Tahoma, Verdana, sans-serif; color:#000; text-shadow:0px 0px 0 rgb(0,0,0);
+}
+
+
+

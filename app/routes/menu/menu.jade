@@ -1,0 +1,37 @@
+extend ../../views/layout
+
+block content 
+
+    .intro-header-menu
+        .container
+            .row
+                .col-lg-12
+                    .intro-message-menu
+                        ul.list-inline.intro-social-buttons-menu
+                            li
+                                #coolContainer
+                                    h1(h-menu='h-menu')
+                                        span.spanGray.coolName1 ARQUITECTO
+                                        span.spanWhite.coolName2 IGNACIOPUENTE
+                            li
+                                ul.uMenu.liMenu
+                                    li
+                                        a#inicio(href='/inicio') INICIO
+                                    li
+                                        a#obras(href='/obras') OBRAS
+                                    li
+                                        a#contacto(href='/contacto') CONTACTO
+                        hr.intro-divider-menu
+                        ul.list-inline.intro-social-buttons.liMenu
+                            li
+                                a(href='#')
+                                    span#english.coolLink English
+                            li
+                                a(href='#')
+                                    span#spanish.coolLink Español
+
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/TweenMax.min.js')
+    script(src='javascripts/cooltext.animations.js')
+    script(src='javascripts/cooltext.min.js')
+    script(src='javascripts/scripts/menuAnimation.js')
